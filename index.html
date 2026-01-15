@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Test</title>
+    
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Dark Mode Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    
+    <style>
+        /* Tambahkan ini untuk memastikan transisi halus */
+        * {
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-200">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 bg-white dark:bg-slate-900 shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+
+                <!-- LOGO -->
+                <a href="#home" class="text-xl font-bold text-sky-600">
+                    Arkhanabiyyu Portofolio
+                </a>
+
+                <!-- NAVIGATION DESKTOP -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#home" class="text-slate-600 hover:text-sky-600 dark:text-slate-300">Home</a>
+                    <a href="#about" class="text-slate-600 hover:text-sky-600 dark:text-slate-300">About</a>
+                    <a href="#portfolio" class="text-slate-600 hover:text-sky-600 dark:text-slate-300">Portfolio</a>
+                    <a href="#contact" class="text-slate-600 hover:text-sky-600 dark:text-slate-300">Contact</a>
+                </nav>
+
+                <!-- RIGHT SECTION -->
+                <div class="flex items-center gap-4">
+                    <!-- DARK MODE TOGGLE -->
+                    <button id="theme-toggle"
+                            class="w-10 h-10 flex items-center justify-center rounded-full
+                                   bg-slate-200 text-slate-800
+                                   dark:bg-slate-700 dark:text-white
+                                   hover:scale-105 transition-transform">
+                        <span id="theme-icon">🌙</span>
+                    </button>
+
+                    <!-- MOBILE MENU TOGGLE -->
+                    <button id="menu-btn" class="md:hidden text-slate-600 dark:text-slate-300">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             class="w-6 h-6"
+                             fill="none"
+                             viewBox="0 0 24 24"
+                             stroke="currentColor">
+                            <path stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- MOBILE MENU -->
+        <div id="mobile-menu"
+             class="hidden md:hidden bg-white dark:bg-slate-800 shadow-lg">
+            <nav class="flex flex-col gap-4 px-6 py-4">
+                <a href="#home" class="text-slate-600 hover:text-sky-600 dark:text-slate-300">Home</a>
+                <a href="#about" class="text-slate-600 hover:text-sky-600 dark:text-slate-300">About</a>
+                <a href="#portfolio" class="text-slate-600 hover:text-sky-600 dark:text-slate-300">Portfolio</a>
+                <a href="#contact" class="text-slate-600 hover:text-sky-600 dark:text-slate-300">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <!-- HEADER END -->
+
+    <!-- SISANYA SECTION DARI KODE ANDA TETAP SAMA -->
+    <!-- HERO SECTION -->
+    <section id="home" class="pt-36">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center">
+
+                <!-- TEXT -->
+                <div class="w-full lg:w-1/2 self-center px-4 mb-10 lg:mb-0">
+                    <h1 class="text-base font-semibold text-sky-600">
+                        Halo saya
+                        <span class="block font-semibold text-slate-800 dark:text-slate-200 text-4xl mt-1">
+                            Arkhanabiyyu
+                        </span>
+                    </h1>
+
+                    <h2 class="font-medium text-slate-500 dark:text-slate-400 text-lg mb-5">
+                        UIUX Designer, &
+                        <span class="text-slate-800 dark:text-slate-300">Frontend Developer</span>
+                    </h2>
+
+                    <p class="font-medium text-slate-500 dark:text-slate-400 mb-10">
+                        Belajar Programming itu seru,
+                        <span class="font-semibold text-slate-800 dark:text-slate-300">
+                            seru banget jir!
+                        </span>
+                    </p>
+
+                    <a href="#"
+                       class="text-base font-semibold text-white bg-sky-500 py-3 px-8 rounded-full
+                              hover:shadow-lg hover:bg-sky-400 transition">
+                        Hubungi Saya
+                    </a>
+                </div>
+
+                <!-- IMAGE + SVG -->
+                <div class="relative w-[350px] sm:w-[400px] lg:w-[450px] mx-auto">
+
+                    <!-- SVG BACKGROUND -->
+                    <svg class="absolute inset-0 w-full h-full z-0"
+                        viewBox="0 0 200 200"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#D0E2FF"
+                            d="M47.9,-63.7C62.4,-55.3,74.9,-41.9,77.3,-26.9C79.8,-11.9,72.3,4.6,64,18C55.8,31.4,46.8,41.8,36.1,50.1C25.3,58.5,12.6,64.8,0.3,64.4C-12,63.9,-24,56.7,-33.5,48C-43,39.2,-50.1,28.9,-55.2,17C-60.4,5.1,-63.6,-8.3,-58.5,-17.5C-53.4,-26.7,-40,-31.7,-28.9,-41.1C-17.8,-50.5,-8.9,-64.4,3.9,-69.7C16.7,-75.1,33.3,-72,47.9,-63.7Z"
+                            transform="translate(100 100)" />
+                    </svg>
+
+                    <!-- IMAGE -->
+                    <img src="./image/arkhanabiyu.png"
+                        alt="Designer Illustration"
+                        class="relative z-10 w-full">
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- HERO SECTION END-->
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="pt-36 pb-20 bg-gray-100 dark:bg-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center">
+                <!-- TEXT -->
+                <div class="w-full lg:w-1/2 px-4 self-center">
+                    <h2 class="text-3xl font-semibold text-sky-600 mb-5">
+                        Tentang Saya
+                    </h2>
+
+                    <p class="font-medium text-slate-500 dark:text-slate-400 mb-5">
+                        Saya adalah seorang UIUX Designer dan Frontend Developer dengan pengalaman lebih dari 3 tahun dalam merancang antarmuka pengguna yang menarik dan fungsional. Saya memiliki keahlian dalam berbagai alat desain seperti Figma, Adobe XD, dan Sketch, serta kemampuan coding menggunakan HTML, CSS, dan JavaScript.
+                    </p>
+
+                    <p class="font-medium text-slate-500 dark:text-slate-400 mb-5">
+                        Saya berkomitmen untuk menciptakan pengalaman pengguna yang optimal dengan fokus pada estetika dan kegunaan. Dalam setiap proyek, saya berusaha untuk memahami kebutuhan pengguna dan menggabungkannya dengan tren desain terbaru untuk menghasilkan solusi yang inovatif dan efektif.
+                    </p>
+
+                    <!-- Icons -->
+                    <div class="flex items-center gap-4 mb-6">
+                        <a href="https://instagram.com/ailurh0pilee"
+                        target="_blank"
+                        class="w-10 h-10 flex items-center justify-center rounded-full
+                                bg-sky-500 hover:bg-sky-400 transition hover:scale-110">
+                            <img src="./image/instagram.png"
+                                alt="Instagram"
+                                class="w-5 h-5">
+                        </a>
+
+                        <a href="https://bmw.com/ailurh0pilee"
+                        target="_blank"
+                        class="w-10 h-10 flex items-center justify-center rounded-full
+                                bg-sky-500 hover:bg-sky-400 transition hover:scale-110">
+                            <img src="./image/bmw.png"
+                                alt="BMW"
+                                class="w-5 h-5">
+                        </a>
+
+                         <a href="https://twitch.com/ailurh0pilee"
+                        target="_blank"
+                        class="w-10 h-10 flex items-center justify-center rounded-full
+                                bg-sky-500 hover:bg-sky-400 transition hover:scale-110">
+                            <img src="./image/twitch.png"
+                                alt="Twitch"
+                                class="w-5 h-5">
+                        </a>
+
+                        <a href="https://youtube.com/ailurh0pilee"
+                        target="_blank"
+                        class="w-10 h-10 flex items-center justify-center rounded-full
+                                bg-sky-500 hover:bg-sky-400 transition hover:scale-110">
+                            <img src="./image/youtube.png"
+                                alt="YouTube"
+                                class="w-5 h-5">
+                        </a>
+                    </div>
+
+
+                    <a href="#"
+                       class="text-base font-semibold text-white bg-sky-500 py-3 px-8 rounded-full
+                              hover:shadow-lg hover:bg-sky-400 transition">
+                        Pelajari Lebih Lanjut
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ABOUT SECTION END -->
+
+    <!-- Portfolio Section Start -->
+    <section id="portfolio" class="pt-36 pb-20 bg-gray-100 dark:bg-slate-800">
+        <div class="container mx-auto px-2">
+            <h2 class="text-3xl font-semibold text-sky-600 mb-10 text-center">
+                Portofolio Saya
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 xl:w-10/12 xl:mx-auto">
+                <!-- Portfolio Item 1 -->
+                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden">
+                    <img src="./image/gambar1.png" alt="Project 1" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2 dark:text-white">Aplikasi Komiku</h3>
+                        <p class="text-slate-500 dark:text-slate-400">Aplikasi komiku ini dibuat dengan SQLite dengan Framework Laravel, dan ini dibuat saat saya 1 minggu saat PKL di Diskominfo.</p>
+                    </div>
+                </div>
+                <!-- Portfolio Item 2 -->
+                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden">
+                    <img src="./image/gambar2.png" alt="Project 2" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2 dark:text-white">Aplikasi Kasir</h3>
+                        <p class="text-slate-500 dark:text-slate-400">Aplikasi kasir ini dibuat dengan Bahasa MySQL dan PHP, dan berfungsi untuk mencatat transaksi penjualan.</p>
+                    </div>
+                </div>
+                <!-- Portfolio Item 3 -->
+                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden">
+                    <img src="./image/gambar3.png" alt="Project 3" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2 dark:text-white">Aplikasi Absensi</h3>
+                        <p class="text-slate-500 dark:text-slate-400">Aplikasi absensi ini dibuat dengan Bahasa MySQL dan PHP, dan berfungsi untuk mencatat kehadiran siswa.</p>
+                    </div>
+                </div>
+                 <!-- Portfolio Item 4 -->
+                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden">
+                    <img src="./image/gambar4.png" alt="Project 4" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2 dark:text-white">Aplikasi Data Kain</h3>
+                        <p class="text-slate-500 dark:text-slate-400">Aplikasi data kain ini dibuat dengan Bahasa MySQL dan PHP, dan berfungsi untuk mencatat data kain.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Section End -->
+
+    <!-- Clients Section Start -->
+    <section id="clients" class="pt-36 pb-32 bg-slate-800 dark:bg-slate-900">
+        <div class="container mx-auto px-2">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-16">
+                    <h4 class="text-2xl font-semibold text-sky-400">Clients</h4>
+                    <h2 class="text-3xl font-bold text-white mb-4 sm:text-4xl lg:text-5xl"> Yang pernah bekerja sama </h2>
+                    <div class="p-4">
+                        <p class="text-slate-300 md:text-lg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit a culpa eos?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-wrap justify-center items-center gap-8">
+                <div class="w-32 h-10 flex items-center justify-center">
+                    <a href="#"
+                    class="max-w-[120px] mx-4 py-4
+                            grayscale opacity-60
+                            transition duration-300
+                            hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="./image/google.png"
+                            alt="Client Google"
+                            class="h-8 w-auto object-contain mx-auto">
+                    </a>
+                </div>
+
+                <div class="w-32 h-10 flex items-center justify-center">
+                    <a href="#"
+                    class="max-w-[120px] mx-4 py-4
+                            grayscale opacity-60
+                            transition duration-300
+                            hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="./image/tokped.png"
+                            alt="Client Tokopedia"
+                            class="max-h-full max-w-full object-contain">
+                    </a>
+                </div>
+
+                <div class="w-32 h-10 flex items-center justify-center">
+                    <a href="#"
+                    class="max-w-[120px] mx-4 py-4
+                            grayscale opacity-60
+                            transition duration-300
+                            hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="./image/Amazon.png"
+                            alt="Client Amazon"
+                            class="max-h-full max-w-full object-contain">
+                    </a>
+                </div>
+
+                <div class="w-32 h-10 flex items-center justify-center">
+                    <a href="#"
+                    class="max-w-[120px] mx-4 py-4
+                            grayscale opacity-60
+                            transition duration-300
+                            hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="./image/facebook.png"
+                            alt="Client Facebook"
+                            class="h-8 w-auto object-contain mx-auto">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Clients Section End -->
+
+    <!-- Blog Section Start -->
+    <section id="blog" class="pt-32 pb-32 bg-white dark:bg-slate-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold text-sky-600 mb-10 text-center">
+                Blog Terbaru
+            </h2>
+            <h4 class="text-center font-bold text-slate-800 dark:text-slate-200 mb-10 text-3xl">Berita dan artikel terkini tentang desain dan pengembangan web</h4>
+            <p class="text-center mb-16 font-medium text-slate-500 dark:text-slate-400">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam dolor fugiat et necessitatibus quod. Ea, voluptatum.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden">
+                    <img src="./image/uiux.webp" alt="Blog Post 1" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2 dark:text-white">Tips Desain UI yang Efektif</h3>
+                        <p class="text-slate-500 dark:text-slate-400">Pelajari cara membuat desain UI yang menarik dan fungsional dengan tips dari para ahli.</p>
+                    </div>
+                </div>
+                <!-- Blog Post 2 -->        
+                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden">
+                    <img src="./image/tren.png" alt="Blog Post 2" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2 dark:text-white">Tren Frontend Development 2024</h3>
+                        <p class="text-slate-500 dark:text-slate-400">Jelajahi tren terbaru dalam pengembangan frontend yang akan mendominasi tahun 2024.</p>
+                    </div>
+                </div>
+                <!-- Blog Post 3 -->
+                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md overflow-hidden">
+                    <img src="./image/blog3.png" alt="Blog Post 3" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2 dark:text-white">Meningkatkan UX dengan Animasi</h3>
+                        <p class="text-slate-500 dark:text-slate-400">Temukan bagaimana animasi dapat meningkatkan pengalaman pengguna di aplikasi dan situs web Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End -->
+
+    <!-- Contact Section Start --> 
+    <section id="contact" class="pt-32 pb-32 bg-white dark:bg-slate-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-xl mx-auto text-center mb-12">
+                <h4 class="font-semibold text-lg text-sky-600 mb-2">
+                    Contact Me
+                </h4>
+                <h2 class="text-3xl font-bold text-slate-800 dark:text-slate-200 mb-4">
+                    Ingin Bekerja Sama?
+                </h2>   
+                <p class="font-medium text-slate-500 dark:text-slate-400">
+                    Jika Anda memiliki pertanyaan atau ingin bekerja sama,
+                    jangan ragu untuk menghubungi saya melalui formulir di bawah ini.
+                </p>
+            </div>
+
+            <!-- CONTACT CARD -->
+            <div class="max-w-xl mx-auto bg-white dark:bg-slate-800 shadow-lg rounded-xl p-8">
+                <form class="space-y-6">
+
+                    <div>
+                        <label class="block text-sm font-medium text-slate-600 dark:text-slate-300 mb-1">
+                            Nama
+                        </label>
+                        <input type="text"
+                            class="w-full rounded-lg border border-slate-300 dark:border-slate-600 
+                                   bg-white dark:bg-slate-700 
+                                   text-slate-800 dark:text-slate-200
+                                   px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-slate-600 dark:text-slate-300 mb-1">
+                            Email
+                        </label>
+                        <input type="email"
+                            class="w-full rounded-lg border border-slate-300 dark:border-slate-600 
+                                   bg-white dark:bg-slate-700 
+                                   text-slate-800 dark:text-slate-200
+                                   px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-slate-600 dark:text-slate-300 mb-1">
+                            Pesan
+                        </label>
+                        <textarea rows="4"
+                                class="w-full rounded-lg border border-slate-300 dark:border-slate-600 
+                                       bg-white dark:bg-slate-700 
+                                       text-slate-800 dark:text-slate-200
+                                       px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500"></textarea>
+                    </div>
+
+                    <button type="submit"
+                            class="w-full bg-sky-500 text-white font-semibold py-3 rounded-full
+                                   hover:bg-sky-400 transition">
+                        Kirim Pesan
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+    <!-- Contact Section END --> 
+
+    <!-- Footer Start -->
+    <footer class="bg-slate-800 dark:bg-slate-900 text-white pt-20 pb-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap gap-y-12">
+
+                <!-- BRAND -->
+                <div class="w-full md:w-1/3 px-4">
+                    <h2 class="font-bold text-3xl mb-4 text-sky-400">
+                        Arkh
+                    </h2>
+                    <p class="text-slate-300 leading-relaxed">
+                        UI/UX Designer & Frontend Developer yang fokus
+                        pada tampilan modern dan pengalaman pengguna.
+                    </p>
+                </div>
+
+                <!-- CONTACT -->
+                <div class="w-full md:w-1/3 px-4">
+                    <h3 class="font-semibold text-xl mb-4">
+                        Hubungi Saya
+                    </h3>
+                    <ul class="text-slate-300 space-y-3">
+                        <li>Email: euro77alkantara@gmail.com</li>
+                        <li>Alamat: Graha Bukti Raya 3</li>
+                        <li>Cilame</li>
+                    </ul>
+                </div>
+
+                <!-- NAVIGATION -->
+                <div class="w-full md:w-1/3 px-4">
+                    <h3 class="font-semibold text-xl mb-4">
+                        Menu
+                    </h3>
+                    <ul class="text-slate-300 space-y-3">
+                        <li><a href="#home" class="hover:text-sky-400 transition">Home</a></li>
+                        <li><a href="#about" class="hover:text-sky-400 transition">About</a></li>
+                        <li><a href="#portfolio" class="hover:text-sky-400 transition">Portfolio</a></li>
+                        <li><a href="#contact" class="hover:text-sky-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="flex items-center gap-7 mb-4 mt-10 justify-center">
+                <a href="https://instagram.com/ailurh0pilee"
+                target="_blank"
+                class="w-10 h-10 flex items-center justify-center rounded-full
+                        bg-sky-500 hover:bg-sky-400 transition hover:scale-110">
+                    <img src="./image/instagram.png"
+                        alt="Instagram"
+                        class="w-5 h-5">
+                </a>
+
+                <a href="https://bmw.com/ailurh0pilee"
+                target="_blank"
+                class="w-10 h-10 flex items-center justify-center rounded-full
+                        bg-sky-500 hover:bg-sky-400 transition hover:scale-110">
+                    <img src="./image/bmw.png"
+                        alt="BMW"
+                        class="w-5 h-5">
+                </a>
+
+                 <a href="https://twitch.com/ailurh0pilee"
+                target="_blank"
+                class="w-10 h-10 flex items-center justify-center rounded-full
+                        bg-sky-500 hover:bg-sky-400 transition hover:scale-110">
+                    <img src="./image/twitch.png"
+                        alt="Twitch"
+                        class="w-5 h-5">
+                </a>
+
+                <a href="https://youtube.com/ailurh0pilee"
+                target="_blank"
+                class="w-10 h-10 flex items-center justify-center rounded-full
+                        bg-sky-500 hover:bg-sky-400 transition hover:scale-110">
+                    <img src="./image/youtube.png"
+                        alt="YouTube"
+                        class="w-5 h-5">
+                </a>
+            </div>
+
+            <!-- COPYRIGHT -->
+            <div class="border-t border-slate-700 mt-16 pt-6 text-center text-slate-400 text-sm">
+                © 2026 Arkhanabiyyu. All rights reserved.
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        // Simple theme toggle function
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeIcon = document.getElementById('theme-icon');
+            
+            // Toggle dark class
+            html.classList.toggle('dark');
+            
+            // Update icon based on current theme
+            if (html.classList.contains('dark')) {
+                themeIcon.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Check saved theme on page load
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const themeIcon = document.getElementById('theme-icon');
+            
+            if (savedTheme === 'dark') {
+                document.documentElement.classList.add('dark');
+                themeIcon.textContent = '☀️';
+            } else {
+                document.documentElement.classList.remove('dark');
+                themeIcon.textContent = '🌙';
+            }
+        }
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Initialize theme on page load
+        document.addEventListener('DOMContentLoaded', initTheme);
+
+        // Add event listener to theme toggle button
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+            themeToggle.addEventListener('click', toggleTheme);
+        }
+
+        // Close mobile menu when clicking on links
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
