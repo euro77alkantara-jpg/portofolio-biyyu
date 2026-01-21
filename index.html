@@ -376,13 +376,13 @@
            <form id="contact-form"
       class="space-y-6">
 
-    <input type="text" name="nama" placeholder="Nama" required
+    <input type="text" name="name" placeholder="Nama" required
         class="w-full px-4 py-2 rounded-lg border dark:bg-slate-700">
 
     <input type="email" name="email" placeholder="Email" required
         class="w-full px-4 py-2 rounded-lg border dark:bg-slate-700">
 
-    <textarea name="pesan" rows="4" placeholder="Pesan" required
+    <textarea name="message" rows="4" placeholder="Pesan" required
         class="w-full px-4 py-2 rounded-lg border dark:bg-slate-700"></textarea>
 
     <!-- LOADING -->
@@ -573,7 +573,7 @@
 
     <script>
 (function(){
-  emailjs.init("PUBLIC_KEY_KAMU");
+  emailjs.init("Rxevpred_VPMcaA87");
 })();
 
 const form = document.getElementById("contact-form");
@@ -591,8 +591,8 @@ form.addEventListener("submit", function(e) {
   loading.classList.remove("hidden");
 
   emailjs.sendForm(
-    "SERVICE_ID_KAMU",
-    "TEMPLATE_ID_KAMU",
+    "service_629nz6e",
+    "template_72cckxt",
     this
   ).then(() => {
       form.reset();
